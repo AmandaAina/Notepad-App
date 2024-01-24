@@ -10,6 +10,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public')); // Serve static files
 
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
 // API Routes
 const notesFilePath = path.join(__dirname, 'db.json');
 
